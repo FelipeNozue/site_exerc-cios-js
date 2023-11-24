@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Messi</title>
+</head>
+<body>
+    <script>
+        var sexo = prompt("Qual seu sexo, F para feminino e M para Masculino[F/M]")
+        var Altura = prompt("Digite sua altura:")
+        var altura = parseFloat(Altura)
+        var pesoIdeal;
+
+        if (sexo == "M"){
+            pesoIdeal = (72.7 * altura) - 58;
+        }else if (sexo == "F"){
+            pesoIdeal = (62.1 * altura) - 47.7;
+        } else{
+            alert("Selecione o sexo corretamente")
+        }
+
+        alert("Seu peso ideal: "+pesoIdeal);
+
+    </script>
+</body>
+</html>

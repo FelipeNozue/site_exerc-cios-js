@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var quilometragem = parseFloat(prompt("Digite a quilometragem percorrida (em km):"));
+        var valorLitro = parseFloat(prompt("Digite o valor do litro (em reais):"));
+
+        var consumo = quilometragem / 8;  
+        var gasto = consumo * valorLitro;
+
+
+        alert("O gasto total do veículo foi de" +gasto+ "R$");
+
+    </script>
+</body>
+</html>

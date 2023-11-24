@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jogo de Cara ou Coroa</title>
+  <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+</head>
+<body>
+
+  <h2>Jogo de Cara ou Coroa</h2>
+
+  <p>Escolha: 
+    <select id="escolha">
+      <option value="cara">Cara</option>
+      <option value="coroa">Coroa</option>
+    </select>
+  </p>
+
+  <button onclick="jogar()">Jogar</button>
+
+  <p id="resultado"></p>
+
+  <script>
+    function jogar() {
+      const escolhaUsuario = $('#escolha').val();
+      const resultadoAleatorio = Math.random() < 0.5 ? 'cara' : 'coroa';
+
+      if (escolhaUsuario === resultadoAleatorio) {
+        $('#resultado').text('Parabéns! Você acertou.');
+      } else {
+        $('#resultado').text(`Você errou. A moeda caiu em ${resultadoAleatorio}.`);
+      }
+    }
+  </script>
+
+</body>
+</html>
